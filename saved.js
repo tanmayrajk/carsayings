@@ -4,9 +4,28 @@ const saveSayingBtn = document.getElementById("save-saying-btn");
 const prevSayingBtn = document.getElementById("prev-saying-btn");
 const nextSayingBtn = document.getElementById("next-saying-btn");
 const currentIndexEl = document.getElementById("current-index");
+const carPicEl = document.getElementById("car-pic");
 
 let currentIndex = 0;
 let savedSayings = JSON.parse(localStorage.getItem("savedSaying")) || [];
+
+function setRandomCarPic() {
+  const carPics = [
+    "0.png",
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+    "7.png",
+    "8.png",
+    "9.png",
+  ];
+  const randomIndex = Math.floor(Math.random() * carPics.length);
+  carPicEl.src = carPics[randomIndex];
+  carPicEl.alt = "car";
+}
 
 function showSaying(index) {
   if (savedSayings.length === 0) {
@@ -43,12 +62,14 @@ function unsaveSaying() {
     }
     showSaying(currentIndex);
     updateSaveSayingBtnText();
+    setRandomCarPic();
   }
 }
 
 window.addEventListener("load", () => {
   showSaying(currentIndex);
   updateSaveSayingBtnText();
+  setRandomCarPic();
 });
 
 nextSayingBtn.addEventListener("click", () => {
@@ -56,6 +77,7 @@ nextSayingBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % savedSayings.length;
     showSaying(currentIndex);
     updateSaveSayingBtnText();
+    setRandomCarPic();
   }
 });
 
@@ -65,6 +87,7 @@ prevSayingBtn.addEventListener("click", () => {
       (currentIndex - 1 + savedSayings.length) % savedSayings.length;
     showSaying(currentIndex);
     updateSaveSayingBtnText();
+    setRandomCarPic();
   }
 });
 

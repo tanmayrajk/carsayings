@@ -1,6 +1,25 @@
 const sayingTextEl = document.getElementById("saying-text");
 const newSayingBtn = document.getElementById("new-saying-btn");
 const saveSayingBtn = document.getElementById("save-saying-btn");
+const carPicEl = document.getElementById("car-pic");
+
+function setRandomCarPic() {
+  const carPics = [
+    "0.png",
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+    "7.png",
+    "8.png",
+    "9.png",
+  ];
+  const randomIndex = Math.floor(Math.random() * carPics.length);
+  carPicEl.src = carPics[randomIndex];
+  carPicEl.alt = "car";
+}
 
 function generateRandomSaying() {
   const numberOfParts = Math.floor(Math.random() * (5 - 2 + 1)) + 2;
@@ -53,6 +72,7 @@ function updateSaveSayingBtnText() {
 
 window.addEventListener("load", () => {
   showRandomSaying();
+  setRandomCarPic();
   updateSaveSayingBtnText();
 });
 
@@ -63,5 +83,6 @@ saveSayingBtn.addEventListener("click", () => {
 
 newSayingBtn.addEventListener("click", () => {
   showRandomSaying();
+  setRandomCarPic();
   updateSaveSayingBtnText();
 });

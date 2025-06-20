@@ -177,4 +177,21 @@ footer {
   flex-direction: row;
   justify-content: center;
   padding: 1rem 0;
+  transition: 200ms;
+}
+
+footer a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 200ms;
+  font-size: larger;
+}
+
+footer a:hover {
+  color: var(--primary-color);
 }

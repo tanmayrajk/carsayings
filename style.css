@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #697565;
+  --secondary-color: #3c3d37;
+  --text-color: #ecdfcc;
+  --background-color: #181c14;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-color);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0 0 0;
+  gap: 0.5rem;
+}
+
+nav h1 {
+  font-family: "Bitter", serif;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+nav h1 a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 200ms;
+}
+
+nav h1 a:hover {
+  letter-spacing: 0.05rem;
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 0.3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+  transition: 200ms;
+  font-size: medium;
+}
+
+nav ul li a:hover {
+  letter-spacing: 0.05rem;
+  color: var(--primary-color);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+#car-saying {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 30em;
+  gap: 0.2rem;
+}
+
+#saying-text {
+  font-family: "Bitter", serif;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+  transition: 200ms;
+}
+
+#saying-text:hover {
+  letter-spacing: 0.05rem;
+}
+
+#saying-author {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+#btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#nav-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#nav-btns p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: medium;
+}
+
+i {
+  padding-top: 0.1rem;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem 0.5rem 0.9rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  gap: 0.3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: medium;
+  transition: 200ms;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+button:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0;
+}
